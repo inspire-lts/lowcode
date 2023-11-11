@@ -48,7 +48,7 @@ const Space: React.FC<Props> = ({ children, id, size, direction }) => {
   }
 
   return (
-    <AntdSpace
+    <AntdSpace 
       direction={direction}
       size={size}
       data-component-id={id}

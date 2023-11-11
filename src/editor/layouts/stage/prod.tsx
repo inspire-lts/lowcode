@@ -210,7 +210,6 @@ const ProdStage: React.FC = () => {
 
     events.forEach((event: any) => {
       const eventConfig = component.props[event.name];
-
       if (eventConfig) {
         props[event.name] = (params: any) => {
           eventConfig.children && execEventFlow(eventConfig.children, params);
@@ -228,9 +227,7 @@ const ProdStage: React.FC = () => {
       }
 
       let props = formatProps(component);
-
       props = { ...props, ...handleEvent(component) };
-
       return React.createElement(
         componentConfig[component.name]?.prod,
         {

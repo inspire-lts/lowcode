@@ -15,7 +15,7 @@ import ProdStage from './stage/prod';
 const Layout: React.FC = () => {
 
   const { mode } = useComponetsStore();
-  const { setComponentConfig } = useComponentConfigStore();
+  const { setComponentConfig, componentConfig } = useComponentConfigStore();
   const [loading, setLoading] = useState(true);
 
   const componentConfigRef = React.useRef<any>({});
@@ -29,7 +29,6 @@ const Layout: React.FC = () => {
   async function loadComponentConfig() {
     // 加载组件配置模块代码
     const modules = import.meta.glob('../components/*/index.ts', { eager: true });
-
     const tasks = Object.values(modules).map((module: any) => {
       if (module?.default) {
         // 执行组件配置里的方法，把注册组件方法传进去
@@ -44,7 +43,7 @@ const Layout: React.FC = () => {
     setLoading(false);
   }
 
-
+  console.log(componentConfig, '注册的组件')
   useEffect(() => {
     loadComponentConfig();
   }, []);

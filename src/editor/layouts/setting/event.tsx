@@ -21,7 +21,6 @@ const ComponentEvent = () => {
     if (!curComponentId) return;
 
     const value = flowEventRef.current?.save();
-    console.log(value);
 
     updateComponentProps(curComponentId, {
       [eventName]: value,

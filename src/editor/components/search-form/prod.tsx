@@ -24,8 +24,6 @@ const SearchForm: React.FC<Props> = ({ id, children, onSearch }) => {
   }, [children]);
 
   const search = (values: any) => {
-    console.log(values);
-
     onSearch && onSearch(values);
   }
 

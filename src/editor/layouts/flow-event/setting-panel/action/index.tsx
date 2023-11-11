@@ -81,8 +81,6 @@ const ActionSettingPanel = (
     setValues(allValues);
   }
 
-  console.log(curModel.current?.config, 'curModel.current?.config');
-
 
   return (
     <Form

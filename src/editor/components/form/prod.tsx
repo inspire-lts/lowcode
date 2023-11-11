@@ -18,7 +18,6 @@ const Form = ({ children, onSaveSuccess, onSaveFail, url }: any, ref: any) => {
   const searchItems = useMemo(() => {
     return React.Children.map(children, (item: any) => {
 
-      console.log(item);
 
       return {
         label: item.props?.label,

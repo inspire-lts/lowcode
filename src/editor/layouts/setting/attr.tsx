@@ -15,7 +15,6 @@ const ComponentAttr = () => {
   const { componentConfig } = useComponentConfigStore();
 
   useEffect(() => {
-    console.log(curComponent);
 
     // 初始化表单
     form.setFieldsValue(curComponent?.props);

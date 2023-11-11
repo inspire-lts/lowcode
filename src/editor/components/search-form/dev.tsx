@@ -36,7 +36,6 @@ const SearchForm: React.FC<Props> = ({ id, children, onSearch }) => {
   const searchItems = useMemo(() => {
     return React.Children.map(children, (item: any) => {
 
-      console.log(item);
 
       return {
         label: item.props?.label,
